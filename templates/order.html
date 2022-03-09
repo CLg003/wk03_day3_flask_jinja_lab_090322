@@ -4,16 +4,16 @@
         <title>{{ title }} - Fake Game Shop</title>
     </head>
     <body>
-        <h1>Order details (FAKE)</h1>
-        <div class="customers">
+        <h1>FAKE Order Details</h1>
+        <div id="customer">
             <p id="order-number">
                 Order number: 00{{ index + 1 }}
             </p>
             <p id="order-details">
-                <b>Customer name: </b>{{game.customer_name}} | <b>Order date: </b>{{game.order_date}} | <b>Quantity: </b>{{game.quantity}} | <b>Game title: </b> {{game.game_title}} | <b>Genre: </b>{{game.genre}} | <b>Age rating: </b>{{game.age_rating}}
+                <b>Customer name: </b>{{game.customer_name}}<br><b>Order date: </b>{{game.order_date}}<br><b>Quantity: </b>{{game.quantity}}<br><b>Game title: </b> {{game.game_title}}<br><b>Genre: </b>{{game.genre}}<br><b>Age rating: </b>{{game.age_rating}}
+                <!-- <b>Customer name: </b>{{game.customer_name}} | <b>Order date: </b>{{game.order_date}} | <b>Quantity: </b>{{game.quantity}} | <b>Game title: </b> {{game.game_title}} | <b>Genre: </b>{{game.genre}} | <b>Age rating: </b>{{game.age_rating}} -->
             </p>
             <img id="game-image" src={{game.image}}>
-            <br>
         </div>
     </body>
 </html>

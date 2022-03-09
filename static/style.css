@@ -3,37 +3,42 @@
     margin: 0;
 }
 
-h1 {
-    background-color: rgba(121, 3, 218, 0.747);
-    color: rgb(17, 17, 17);
-    width: 100%;
-    padding: 20px;
+body {
+    background-color: rgb(232, 231, 235);
 }
 
-.customers {
+h1 {
+    background-color: rgb(47, 1, 85);
+    color: rgb(43, 180, 134);
+    width: 100%;
     padding: 20px;
-    display: grid;
-    grid-template-areas:
-        'order-number order-details';
-    grid-template-columns: 1fr 4fr;
-    align-items: center;
+    margin-bottom: 10px;
+}
+
+#orders-gallery {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: flex-end; */
+}
+
+#customer {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
 }
 
 #order-number {
     padding: 10px 30px;
-    background-color: rgb(83, 147, 167);
-    color: rgb(110, 8, 8);
-    grid-area: order-number;
+    background-color: rgb(113, 192, 165);
+    color: rgb(47, 1, 85);
+    font-weight: bold;
 }
 
 #order-details {
-    grid-area: order-details;
     background-color: rgb(216, 231, 231);
     padding: 10px 30px;
 }
 
 #game-image {
-    width: 200px;
-    margin-top: 10px;
-    margin-left: 50px;
+    margin-bottom: 20px;
 }
