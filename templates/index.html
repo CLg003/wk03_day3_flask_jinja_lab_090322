@@ -1,18 +1,19 @@
 <html>
     <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
         <title>{{ title }} - Fake Game Shop</title>
     </head>
     <body>
         <h1>List of game orders (FAKE)</h1>
         {% for game in games %}
-        <div>
-            <p>
+        <div class="customers">
+            <p id="order-number">
+                Order number: <a href="orders/{{ loop.index - 1 }}">00{{ loop.index }}</a>
+            </p>
+            <p id="order-details">
                 <b>Customer name: </b>{{game.customer_name}} | <b>Order date: </b>{{game.order_date}} | <b>Quantity: </b>{{game.quantity}} | <b>Game title: </b> {{game.game_title}} | <b>Genre: </b>{{game.genre}} | <b>Age rating: </b>{{game.age_rating}}
             </p>
-            <p>
-                Order number: <a href="orders/{{ loop.index - 1 }}">{{ loop.index }}</a>
-            </p>
-            <br>
+            <img id="game-image" src={{game.image}}>
         </div>
         {% endfor %}
     </body>

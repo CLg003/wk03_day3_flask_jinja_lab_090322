@@ -8,4 +8,4 @@ def index():
 
 @app.route('/orders/<index>')
 def order(index):
-    return render_template('order.html', title="Order Details", game=games[int(index)])
+    return render_template('order.html', title="Order Details", game=games[int(index)], index=int(index))
