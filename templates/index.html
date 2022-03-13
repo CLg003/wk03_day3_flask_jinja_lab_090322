@@ -6,8 +6,8 @@
     <body>
         <h1>FAKE Game Orders</h1>
         <div id="orders-gallery">
-            <div id="customer">
-                {% for game in games %}
+            {% for game in games %}
+                <div id="customer">
                     <p id="order-number">
                         Order number: <a href="orders/{{ loop.index - 1 }}">00{{ loop.index }}</a>
                     </p>
@@ -15,9 +15,9 @@
                         <b>Customer name: </b>{{game.customer_name}}<br><b>Order date: </b>{{game.order_date}}<br><b>Quantity: </b>{{game.quantity}}<br><b>Game title: </b> {{game.game_title}}<br><b>Genre: </b>{{game.genre}}<br><b>Age rating: </b>{{game.age_rating}}
                         <!-- <b>Customer name: </b>{{game.customer_name}} | <b>Order date: </b>{{game.order_date}} | <b>Quantity: </b>{{game.quantity}} | <b>Game title: </b> {{game.game_title}} | <b>Genre: </b>{{game.genre}} | <b>Age rating: </b>{{game.age_rating}} -->
                     </p>
-                    <img id="game-image" src={{game.image}}>
-                {% endfor %}
-            </div>
+                    <img id="game-image" src={{ game.image }}>
+                </div>
+            {% endfor %}
         </div>
     </body>
 </html>
